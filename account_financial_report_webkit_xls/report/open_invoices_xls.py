@@ -13,7 +13,7 @@ from openerp.tools.translate import _
 
 
 class open_invoices_xls(report_xls):
-    column_sizes = [12, 12, 20, 15, 30, 30, 14, 14, 14, 14, 14, 14, 10]
+    column_sizes = [12, 12, 20, 15, 20, 12, 40, 12, 14, 14, 14, 14, 14, 10]
 
     def global_initializations(self, wb, _p, xlwt, _xs, objects, data):
         # this procedure will initialise variables and Excel cell styles and
@@ -36,11 +36,11 @@ class open_invoices_xls(report_xls):
             if hasattr(acc, 'grouped_ledger_lines'):
                 group_lines = True
         if group_lines:
-            self.nbr_columns = 12
-        elif _p.amount_currency(data) and not group_lines:
             self.nbr_columns = 13
+        elif _p.amount_currency(data) and not group_lines:
+            self.nbr_columns = 14
         else:
-            self.nbr_columns = 11
+            self.nbr_columns = 12
         # -------------------------------------------------------
         # cell style for report title
         self.style_font12 = xlwt.easyxf(_xs['xls_title'])
@@ -202,7 +202,9 @@ class open_invoices_xls(report_xls):
         ]
         if not group_lines:
             c_specs += [('partner', 1, 0, 'text', _('Partner'),
-                         None, self.style_yellow_bold), ]
+                         None, self.style_yellow_bold),
+                         ('partner_ref', 1, 0, 'text', _('Partner ref.'),
+                         None, self.style_yellow_bold) ]
         c_specs += [
             ('label', 1, 0, 'text', _('Label'), None, self.style_yellow_bold),
             ('rec', 1, 0, 'text', _('Rec.'), None, self.style_yellow_bold),
@@ -304,6 +306,7 @@ class open_invoices_xls(report_xls):
             ('entry', 1, 0, 'text', line.get('move_name') or ''),
             ('journal', 1, 0, 'text', line.get('jcode') or ''),
             ('partner', 1, 0, 'text', line.get('partner_name') or ''),
+            ('partner_ref', 1, 0, 'text', line.get('partner_ref') or ''),
             ('label', 1, 0, 'text', label),
             ('rec', 1, 0, 'text', line.get('rec_name') or ''),
         ]
@@ -321,9 +324,9 @@ class open_invoices_xls(report_xls):
         ]
 
         # determine the formula of the cumulated balance
-        debit_cell = rowcol_to_cell(row_position, 8)
-        credit_cell = rowcol_to_cell(row_position, 9)
-        previous_balance = rowcol_to_cell(row_position - 1, 10)
+        debit_cell = rowcol_to_cell(row_position, 9)
+        credit_cell = rowcol_to_cell(row_position, 10)
+        previous_balance = rowcol_to_cell(row_position - 1, 11)
 
         # if it is the first line, the balance is only debit - credit
         if line_number == 1:
@@ -380,9 +383,9 @@ class open_invoices_xls(report_xls):
             style_line_date = self.style_date
             style_line_decimal = self.style_decimal
 
-        debit_cell = rowcol_to_cell(row_position, 7)
-        credit_cell = rowcol_to_cell(row_position, 8)
-        previous_balance = rowcol_to_cell(row_position - 1, 9)
+        debit_cell = rowcol_to_cell(row_position, 8)
+        credit_cell = rowcol_to_cell(row_position, 9)
+        previous_balance = rowcol_to_cell(row_position - 1, 10)
 
         # if it is the first line, the balance is only debit - credit
         if line_number == 1:
@@ -443,26 +446,26 @@ class open_invoices_xls(report_xls):
         # selecting the option regroup by currency, 5 in  the other case
         start_col = 5
 
-        debit_partner_start = rowcol_to_cell(row_start_partner, start_col + 3)
-        debit_partner_end = rowcol_to_cell(row_position - 1, start_col + 3)
+        debit_partner_start = rowcol_to_cell(row_start_partner, start_col + 4)
+        debit_partner_end = rowcol_to_cell(row_position - 1, start_col + 4)
         debit_partner_total = 'SUM(' + debit_partner_start + \
             ':' + debit_partner_end + ')'
 
-        credit_partner_start = rowcol_to_cell(row_start_partner, start_col + 4)
-        credit_partner_end = rowcol_to_cell(row_position - 1, start_col + 4)
+        credit_partner_start = rowcol_to_cell(row_start_partner, start_col + 5)
+        credit_partner_end = rowcol_to_cell(row_position - 1, start_col + 5)
         credit_partner_total = 'SUM(' + credit_partner_start + \
             ':' + credit_partner_end + ')'
 
-        bal_curr_start = rowcol_to_cell(row_start_partner, start_col + 6)
-        bal_curr_end = rowcol_to_cell(row_position - 1, start_col + 6)
+        bal_curr_start = rowcol_to_cell(row_start_partner, start_col + 7)
+        bal_curr_end = rowcol_to_cell(row_position - 1, start_col + 7)
         cumul_balance_curr = 'SUM(' + bal_curr_start + ':' + bal_curr_end + ')'
 
-        bal_partner_debit = rowcol_to_cell(row_position, start_col + 3)
-        bal_partner_credit = rowcol_to_cell(row_position, start_col + 4)
+        bal_partner_debit = rowcol_to_cell(row_position, start_col + 4)
+        bal_partner_credit = rowcol_to_cell(row_position, start_col + 5)
         bal_partner_total = bal_partner_debit + '-' + bal_partner_credit
 
         c_specs = [('empty%s' % x, 1, 0, 'text', None)
-                   for x in range(start_col)]
+                   for x in range(start_col + 1)]
 
         c_specs += [
             ('init_bal', 1, 0, 'text', _('Cumulated Balance on Partner')),
@@ -566,7 +569,7 @@ class open_invoices_xls(report_xls):
         # sum of the debit & credit data
         # the text "Cumulated Balance on Partner starts in column 4 when
         # selecting the option regroup by currency, 5 in  the other case
-        start_col = 5
+        start_col = 6
 
         # range in which we search for the text "Cumulated Balance on Partner"
         reference_start = rowcol_to_cell(row_start_account, start_col)
@@ -640,7 +643,7 @@ class open_invoices_xls(report_xls):
         # sum of the debit & credit data
         # the text "Cumulated Balance on Partner starts in column 4 when
         # selecting the option regroup by currency, 5 in  the other case
-        start_col = 4
+        start_col = 5
 
         # range in which we search for the text "Cumulated Balance on Partner"
         reference_start = rowcol_to_cell(row_start_account, start_col)

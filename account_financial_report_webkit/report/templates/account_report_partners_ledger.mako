@@ -106,13 +106,13 @@
                             ## journal
                             <div class="act_as_cell" style="width: 70px;">${_('Journal')}</div>
                             ## partner
-                            <div class="act_as_cell" style="width: 100px;">${_('Partner')}</div>
+                            <div class="act_as_cell" style="width: 110px;">${_('Partner')}</div>
                             ## move reference
-                            <div class="act_as_cell" style="width: 60px;">${_('Reference')}</div>
+                            <div class="act_as_cell" style="width: 60px;">${_('Partner ref.')}</div>
                             ## label
-                            <div class="act_as_cell" style="width: 280px;">${_('Label')}</div>
+                            <div class="act_as_cell" style="width: 300px;">${_('Label')}</div>
                             ## reconcile
-                            <div class="act_as_cell" style="width: 80px;">${_('Rec.')}</div>
+                            <div class="act_as_cell" style="width: 50px;">${_('Rec.')}</div>
                             ## debit
                             <div class="act_as_cell amount" style="width: 80px;">${_('Debit')}</div>
                             ## credit
@@ -195,8 +195,8 @@
                               <div class="act_as_cell">${line.get('jcode') or ''}</div>
                               ## partner
                               <div class="act_as_cell overflow_ellipsis">${line.get('partner_name') or ''}</div>
-                              ## move reference
-                              <div class="act_as_cell">${line.get('lref') or ''}</div>
+                              ## partner reference
+                              <div class="act_as_cell">${line.get('partner_ref') or ''}</div>
                               ## label
                               <div class="act_as_cell">${label}</div>
                               ## reconcile

@@ -47,10 +47,12 @@ class AgedOpenInvoice(orm.TransientModel):
         filters = self.onchange_filter(cr, uid, ids, filter='filter_period',
                                        fiscalyear_id=fiscalyear,
                                        context=context)
-        res['value'].update({
-            'period_from': filters['value']['period_from'],
-            'period_to': filters['value']['period_to'],
-        })
+        if filters.get('value') and filters['value'].get('period_from') and \
+                filters['value'].get('period_to'):
+            res['value'].update({
+                'period_from': filters['value']['period_from'],
+                'period_to': filters['value']['period_to'],
+            })
         return res
 
     def _print_report(self, cr, uid, ids, data, context=None):

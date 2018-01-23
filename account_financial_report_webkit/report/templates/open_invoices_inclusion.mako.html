@@ -37,11 +37,11 @@
                 ## partner
                 <div class="act_as_cell" style="width: 120px;">${_('Partner')}</div>
                 ## move reference
-                <div class="act_as_cell" style="width: 100px;">${_('Reference')}</div>
+                <div class="act_as_cell" style="width: 60px;">${_('Partner ref.')}</div>
                 ## label
-                <div class="act_as_cell" style="width: 180px;">${_('Label')}</div>
+                <div class="act_as_cell" style="width: 250px;">${_('Label')}</div>
                 ## reconcile
-                <div class="act_as_cell" style="width: 80px;">${_('Rec.')}</div>
+                <div class="act_as_cell" style="width: 50px;">${_('Rec.')}</div>
                 ## maturity
                 <div class="act_as_cell" style="width: 60px;">${_('Due Date')}</div>
                 ## debit
@@ -89,7 +89,7 @@
                   ## partner
                   <div class="act_as_cell overflow_ellipsis">${line.get('partner_name') or ''}</div>
                   ## move reference
-                  <div class="act_as_cell">${line.get('lref') or ''}</div>
+                  <div class="act_as_cell">${line.get('partner_ref') or ''}</div>
                   ## label
                   <div class="act_as_cell">${label}</div>
                   ## reconcile
