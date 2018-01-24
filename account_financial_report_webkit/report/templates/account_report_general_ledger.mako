@@ -103,11 +103,11 @@
                         ## account code
                         <div class="act_as_cell" style="width: 65px;">${_('Account')}</div>
                         ## partner
-                        <div class="act_as_cell" style="width: 140px;">${_('Partner')}</div>
-                        ## move reference
-                        <div class="act_as_cell" style="width: 140px;">${_('Reference')}</div>
+                        <div class="act_as_cell" style="width: 150px;">${_('Partner')}</div>
+                        ## partner reference
+                        <div class="act_as_cell" style="width: 60px;">${_('Partner ref.')}</div>
                         ## label
-                        <div class="act_as_cell" style="width: 160px;">${_('Label')}</div>
+                        <div class="act_as_cell" style="width: 230px;">${_('Label')}</div>
                         ## counterpart
                         <div class="act_as_cell" style="width: 100px;">${_('Counter part')}</div>
                         ## debit
@@ -146,7 +146,7 @@
                           <div class="act_as_cell"></div>
                           ## partner
                           <div class="act_as_cell"></div>
-                          ## move reference
+                          ## partner reference
                           <div class="act_as_cell"></div>
                           ## label
                           <div class="act_as_cell">${_('Initial Balance')}</div>
@@ -192,8 +192,8 @@
                           <div class="act_as_cell">${account.code}</div>
                           ## partner
                           <div class="act_as_cell overflow_ellipsis">${line.get('partner_name') or ''}</div>
-                          ## move reference
-                          <div class="act_as_cell">${line.get('lref') or ''}</div>
+                          ## partner reference
+                          <div class="act_as_cell">${line.get('partner_ref') or ''}</div>
                           ## label
                           <div class="act_as_cell">${label | h}</div>
                           ## counterpart

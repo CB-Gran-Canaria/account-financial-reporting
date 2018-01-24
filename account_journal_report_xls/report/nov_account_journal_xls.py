@@ -115,7 +115,7 @@ class account_journal_xls(report_xls):
                 'lines': [1, 0, 'text', _render("l['partner_name']")],
                 'totals': [1, 0, 'text', None]},
             'partner_ref': {
-                'header': [1, 36, 'text', _render("_('Partner Reference')")],
+                'header': [1, 12, 'text', _render("_('Partner Reference')")],
                 'lines': [1, 0, 'text', _render("l['partner_ref']")],
                 'totals': [1, 0, 'text', None]},
             'date_maturity': {

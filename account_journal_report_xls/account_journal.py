@@ -50,6 +50,7 @@ class account_journal(orm.Model):
             ]
         res += [
             'partner_name',      # res.partner,name
+            'partner_ref',       # res.partner,ref
             'aml_name',          # account.move.line,name
             'tax_code',          # account.tax.code,code
             'tax_amount',        # account.move.line,tax_amount
@@ -61,7 +62,6 @@ class account_journal(orm.Model):
             # 'reconcile',         # account.move.line,reconcile_id.name
             # 'reconcile_partial',
             # account.move.line,reconcile_partial_id.name
-            # 'partner_ref',       # res.partner,ref
             # 'move_ref',          # account.move,ref
             # 'move_id',           # account.move,id
             # 'acc_name',          # account.account,name

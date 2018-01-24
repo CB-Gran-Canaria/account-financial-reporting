@@ -28,6 +28,7 @@
       <lineStyle kind="LINEBELOW" colorName="#000000" start="5,-1" stop="5,-1"/>
       <lineStyle kind="LINEBELOW" colorName="#000000" start="6,-1" stop="6,-1"/>
       <lineStyle kind="LINEBELOW" colorName="#000000" start="7,-1" stop="7,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="8,-1" stop="8,-1"/>
     </blockTableStyle>
     <blockTableStyle id="Table9">
       <blockAlignment value="LEFT"/>
@@ -170,7 +171,7 @@
       <para style="terp_5f_default_5f_2">
         <font color="white"> </font>
       </para>
-      <blockTable colWidths="80.0,55.0,55.0,97.0,261.0,87.0,75.0,74.0" style="Table8">
+      <blockTable colWidths="80.0,55.0,55.0,97.0,50.0,211.0,87.0,75.0,74.0" style="Table8">
         <tr>
           <td>
             <para style="P6">Entry</para>
@@ -183,6 +184,9 @@
           </td>
           <td>
             <para style="P1">Partner</para>
+          </td>
+          <td>
+            <para style="P1">Partner ref.</para>
           </td>
           <td>
             <para style="P1">Description</para>
@@ -200,7 +204,7 @@
       </blockTable>
       <section>
         <para style="P4">[[ repeatIn(lines(o), 'l') ]]</para>
-        <blockTable colWidths="80.0,55.0,55.0,97.0,261.0,13.0,75.0,75.0,75.0" style="Table9">
+        <blockTable colWidths="80.0,55.0,55.0,97.0,50.0,211.0,13.0,75.0,75.0,75.0" style="Table9">
           <tr>
             <td>
               <para style="terp_5f_default_5f_8">[[ l['move_name'] != '/' and l['move_name'] or ('*'+str(l['move_id'])) ]]</para>
@@ -213,6 +217,9 @@
             </td>
             <td>
               <para style="terp_5f_default_5f_8">[[ l['partner_name'] ]]</para>
+            </td>
+            <td>
+              <para style="terp_5f_default_5f_8">[[ l['partner_ref'] ]]</para>
             </td>
             <td>
               <para style="terp_5f_default_5f_8">[[ l['aml_name'] ]]</para>
