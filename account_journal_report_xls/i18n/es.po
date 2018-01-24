@@ -1,22 +1,19 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * account_journal_report_xls
-# 
-# Translators:
-# Hugo Santos <hugo.santos@factorlibre.com>, 2017
+#       * account_journal_report_xls
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-17 12:52+0000\n"
-"PO-Revision-Date: 2017-02-17 12:52+0000\n"
-"Last-Translator: Hugo Santos <hugo.santos@factorlibre.com>, 2017\n"
-"Language-Team: Spanish (Spain) (https://www.transifex.com/oca/teams/23907/es_ES/)\n"
+"POT-Creation-Date: 2018-01-24 18:57+0000\n"
+"PO-Revision-Date: 2018-01-24 18:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es_ES\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: account_journal_report_xls
 #: selection:account.print.journal.xls,target_move:0
@@ -37,7 +34,7 @@ msgstr "Importe"
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,chart_account_id:0
 msgid "Chart of Account"
-msgstr "Árbol de cuentas"
+msgstr "Plan de cuentas"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,company_id:0
@@ -52,7 +49,7 @@ msgstr "Creado por"
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,create_date:0
 msgid "Created on"
-msgstr "Creado en"
+msgstr "Creado el"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/report/nov_account_journal.py:80
@@ -64,13 +61,13 @@ msgstr "Haber"
 #: code:addons/account_journal_report_xls/report/nov_account_journal.py:79
 #, python-format
 msgid "Currency"
-msgstr "Moneda"
+msgstr "Divisa"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/report/nov_account_journal_xls.py:363
 #, python-format
 msgid "Customisation Error!"
-msgstr "¡Error de personalización!"
+msgstr "¡Error personalización!"
 
 #. module: account_journal_report_xls
 #: selection:account.print.journal.xls,filter:0
@@ -87,12 +84,12 @@ msgstr "Debe"
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,display_name:0
 msgid "Display Name"
-msgstr "Nombre a mostrar"
+msgstr "Nombre mostrado"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,date_to:0
 msgid "End Date"
-msgstr "Fecha final"
+msgstr "Fecha fin"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,period_to:0
@@ -156,19 +153,19 @@ msgstr "Diario"
 #. module: account_journal_report_xls
 #: selection:account.print.journal.xls,sort_selection:0
 msgid "Journal Entry Number"
-msgstr "Número de asiento contable"
+msgstr "Número de asiento"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/report/nov_account_journal_xls.py:226
 #, python-format
 msgid "Journal Overview"
-msgstr "Diario detallado"
+msgstr "Libro diario"
 
 #. module: account_journal_report_xls
 #: model:ir.actions.act_window,name:account_journal_report_xls.action_print_journal_by_fiscalyear_xls
 #: model:ir.ui.menu,name:account_journal_report_xls.menu_print_journal_by_fiscalyear_xls
 msgid "Journal by Fiscal Year"
-msgstr "Diario por ejercicio fiscal"
+msgstr "Diario por año fiscal"
 
 #. module: account_journal_report_xls
 #: model:ir.actions.act_window,name:account_journal_report_xls.action_print_journal_by_period_xls
@@ -185,29 +182,29 @@ msgstr "Diarios"
 #. module: account_journal_report_xls
 #: help:account.print.journal.xls,fiscalyear_id:0
 msgid "Keep empty for all open fiscal year"
-msgstr "Mantener vacío para todos los años fiscales abiertos"
+msgstr "Mantener vacío para todos los ejercicios fiscales abiertos"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,__last_update:0
 msgid "Last Modified on"
-msgstr "Última modificación en"
+msgstr "Últ. modificación el"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,write_uid:0
 msgid "Last Updated by"
-msgstr "Última actualización de"
+msgstr "Últ. modificación por"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,write_date:0
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr "Last Updated on"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/wizard/print_journal_wizard.py:160
 #: code:addons/account_journal_report_xls/wizard/print_journal_wizard.py:184
 #, python-format
 msgid "No Data Available"
-msgstr "No hay datos disponibles"
+msgstr "Sin datos disponibles"
 
 #. module: account_journal_report_xls
 #: selection:account.print.journal.xls,filter:0
@@ -219,7 +216,7 @@ msgstr "Sin filtros"
 #: code:addons/account_journal_report_xls/wizard/print_journal_wizard.py:185
 #, python-format
 msgid "No records found for your selection!"
-msgstr "¡No se han encontrado registros para su selección!"
+msgstr "¡Sin registros encontrados para su selección!"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/report/nov_account_journal.py:74
@@ -240,17 +237,13 @@ msgstr "Imprimir"
 
 #. module: account_journal_report_xls
 #: help:account.print.journal.xls,amount_currency:0
-msgid ""
-"Print Report with the currency column if the currency differs from the "
-"company currency."
-msgstr ""
-"Imprimir el informe con una columna de moneda, si la moneda es diferente de "
-"la moneda de la compañía"
+msgid "Print Report with the currency column if the currency differs from the company currency."
+msgstr "Imprima el informe con la columna de divisa, si la divisa puede diferir de la divisa de la compañía."
 
 #. module: account_journal_report_xls
 #: model:ir.model,name:account_journal_report_xls.model_account_print_journal_xls
 msgid "Print/Export Journal"
-msgstr "Imprimir/Exportar diario"
+msgstr "Imprimir/Exportar Diario"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/report/nov_account_journal_xls.py:309
@@ -261,12 +254,12 @@ msgstr "¡Error de programación!"
 #. module: account_journal_report_xls
 #: help:account.print.journal.xls,chart_account_id:0
 msgid "Select Charts of Accounts"
-msgstr "Seleccione un árbol de cuentas"
+msgstr "Seleccione el plan de cuentas"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,date_from:0
 msgid "Start Date"
-msgstr "Fecha inicial"
+msgstr "Fecha de inicio"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,period_from:0
@@ -277,46 +270,41 @@ msgstr "Periodo inicial"
 #: code:addons/account_journal_report_xls/report/nov_account_journal.py:193
 #, python-format
 msgid "Statement"
-msgstr "Extracto"
+msgstr "Declaración"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,target_move:0
 msgid "Target Moves"
-msgstr "Movimientos de destino"
+msgstr "Asientos objetivo"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/report/nov_account_journal_xls.py:364
 #, python-format
-msgid ""
-"The 'Balance' field is a calculated XLS                                     "
-"field requiring the presence of the                                     "
-"'Debit' and 'Credit' fields !"
-msgstr ""
-"¡El campo 'Balance' es un campo calculado en el fichero XLS que requiere la "
-"presencia de los campos 'Debe' y 'Haber'!"
+msgid "The 'Balance' field is a calculated XLS                                     field requiring the presence of the                                     'Debit' and 'Credit' fields !"
+msgstr "¡El campo de 'Saldo' es un campo calculado de XLS que requiere la presencia de los campos de de 'Debe' y 'Haber'!"
 
 #. module: account_journal_report_xls
 #: view:account.print.journal.xls:account_journal_report_xls.view_print_journal_xls
 msgid "This report allows you to generate a pdf or xls of your journals"
-msgstr "Este informe le permite generar un pdf o un xls de sus diarios"
+msgstr "Este informe le permite generar un PDF o XLS de sus diarios"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/report/nov_account_journal_xls.py:296
 #, python-format
 msgid "VAT Declaration"
-msgstr "Declaración de impuestos"
+msgstr "Declaración IVA"
 
 #. module: account_journal_report_xls
 #: code:addons/account_journal_report_xls/report/nov_account_journal.py:190
 #: code:addons/account_journal_report_xls/report/nov_account_journal.py:194
 #, python-format
 msgid "Voucher"
-msgstr "Comprobante"
+msgstr "Pago/Cobro"
 
 #. module: account_journal_report_xls
 #: field:account.print.journal.xls,amount_currency:0
 msgid "With Currency"
-msgstr "Con moneda"
+msgstr "Con divisa"
 
 #. module: account_journal_report_xls
 #: view:account.print.journal.xls:account_journal_report_xls.view_print_journal_xls
