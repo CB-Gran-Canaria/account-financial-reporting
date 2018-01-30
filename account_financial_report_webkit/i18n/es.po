@@ -1136,6 +1136,12 @@ msgid "Partner Ledger Webkit"
 msgstr "Libro mayor de empresas Webkit"
 
 #. module: account_financial_report_webkit
+#: report:addons/account_financial_report_webkit/report/templates/account_report_general_ledger.mako:108
+#: report:addons/account_financial_report_webkit/report/templates/account_report_partners_ledger.mako:111
+msgid "Partner ref."
+msgstr "Cód. empresa"
+
+#. module: account_financial_report_webkit
 #: field:account.aged.trial.balance.webkit,result_selection:0
 #: field:aged.open.invoices.webkit,result_selection:0
 #: field:open.invoices.webkit,result_selection:0
