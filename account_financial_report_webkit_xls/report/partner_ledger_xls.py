@@ -268,7 +268,7 @@ class partner_ledger_xls(report_xls):
 
                         # Print row 'Initial Balance' by partn
                         c_specs = [('empty%s' % x, 1, 0, 'text', None)
-                                   for x in range(5)]
+                                   for x in range(6)]
                         c_specs += [
                             ('init_bal', 1, 0, 'text', _('Initial Balance')),
                             ('rec', 1, 0, 'text', None),
