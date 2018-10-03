@@ -5,7 +5,7 @@
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
                 <t t-call="account_financial_report.internal_layout">
-                    <t t-call="account_financial_report.report_trial_balance_base"/>                
+                    <t t-call="account_financial_report.report_trial_balance_base"/>
                 </t>
             </t>
         </t>
@@ -28,18 +28,18 @@
                     <div class="act_as_table data_table" style="width: 100%;">
                         <!-- Display account header -->
                         <t t-call="account_financial_report.report_trial_balance_lines_header"/>
-                        
+
                         <!-- Display each lines -->
                         <t t-foreach="o.account_ids" t-as="line">
-                            <t t-set="type" t-value='"account_type"'/>                                                                    
+                            <t t-set="type" t-value='"account_type"'/>
                             <!-- Adapt -->
                             <t t-set="style" t-value="'font-size:8px;'"/>
                             <t t-set="padding" t-value="line.level * 4"/>
                             <t t-set="style" t-value="'font-size: ' + str(14 - line.level) + 'px; margin-left: ' + str(line.level * 4) + 'px;'"/>
                             <t t-if="line.account_group_id">
                                 <t t-set="style" t-value="style + 'font-weight: bold; color: blue;'"/>
-                            </t>              
-                            
+                            </t>
+
                             <!-- Display account lines -->
                             <t t-call="account_financial_report.report_trial_balance_line"/>
                             <!-- Adapt style -->
@@ -55,7 +55,7 @@
                             <t t-set="style" t-value="'font-size:8px;'"/>
                             <t t-set="padding" t-value="account.level * 4"/>
                             <t t-set="style" t-value="'font-size: ' + str(14 - account.level) + 'px; margin-left: ' + str(account.level * 4) + 'px;'"/>
-                            
+
                             <!-- Display account header -->
                             <div class="act_as_table list_table" style="margin-top: 10px;"/>
                             <div class="act_as_caption account_title"
@@ -77,7 +77,7 @@
 
                                 <!-- Adapt style -->
                                 <t t-set="padding" t-value="padding+4"/>
-                                
+
                                 <!-- Display each partners -->
                                 <t t-foreach="account.partner_ids" t-as="line">
                                     <t t-set="type" t-value='"partner_type"'/>
@@ -88,9 +88,9 @@
                             </div>
 
                             <!-- Display account footer -->
-                            <t t-set="type" t-value='"account_type"'/>                                                                    
-                            <t t-call="account_financial_report.report_trial_balance_account_footer"/>                           
-                            
+                            <t t-set="type" t-value='"account_type"'/>
+                            <t t-call="account_financial_report.report_trial_balance_account_footer"/>
+
                         </div>
                     </t>
                 </t>
@@ -128,7 +128,7 @@
                     <!--## Code-->
                     <div class="act_as_cell" style="width: 8.86%;">Code</div>
                     <!--## Account-->
-                    <div class="act_as_cell" style="width: 52.58%;">Account
+                    <div class="act_as_cell" style="width: 40.58%;">Account
                     </div>
                 </t>
                 <t t-if="show_partner_details">
@@ -137,14 +137,14 @@
                     </div>
                 </t>
                 <!--## Initial balance-->
-                <div class="act_as_cell" style="width: 9.64%;">Initial
+                <div class="act_as_cell" style="width: 12.64%;">Initial
                     balance</div>
                 <!--## Debit-->
-                <div class="act_as_cell" style="width: 9.64%;">Debit</div>
+                <div class="act_as_cell" style="width: 12.64%;">Debit</div>
                 <!--## Credit-->
-                <div class="act_as_cell" style="width: 9.64%;">Credit</div>
+                <div class="act_as_cell" style="width: 12.64%;">Credit</div>
                 <!--## Ending balance-->
-                <div class="act_as_cell" style="width: 9.64%;">Ending balance</div>
+                <div class="act_as_cell" style="width: 12.64%;">Ending balance</div>
                 <t t-if="foreign_currency">
                     <!--## currency_name-->
                     <div class="act_as_cell" style="width: 4.43%;">Cur.</div>
